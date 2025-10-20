@@ -1,0 +1,713 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C8E5AC82E12CE280083528F /* OpenfortSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4C8E5AC72E12CE280083528F /* OpenfortSwift */; };
+		B91518CD2E3120F200642529 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = B91518CC2E3120F200642529 /* FirebaseCore */; };
+		B91518D42E3255A800642529 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B91518D32E3255A800642529 /* FirebaseAuth */; };
+		B915191C2E42424200642529 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B915191B2E42424200642529 /* GoogleSignInSwift */; };
+		B91519572E4CC47B00642529 /* Web3 in Frameworks */ = {isa = PBXBuildFile; productRef = B91519562E4CC47B00642529 /* Web3 */; };
+		B91519592E4CC68F00642529 /* Web3ContractABI in Frameworks */ = {isa = PBXBuildFile; productRef = B91519582E4CC68F00642529 /* Web3ContractABI */; };
+		B915195B2E4CC69600642529 /* Web3PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = B915195A2E4CC69600642529 /* Web3PromiseKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C0AED862E006EA60059C4D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C0AED6F2E006E9C0059C4D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C0AED762E006E9C0059C4D3;
+			remoteInfo = OpenfortAuthorization;
+		};
+		4C0AED902E006EA60059C4D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C0AED6F2E006E9C0059C4D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C0AED762E006E9C0059C4D3;
+			remoteInfo = OpenfortAuthorization;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4C05F2C32E007C5C0099E85E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4C0AED772E006E9C0059C4D3 /* OpenfortAuthorization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenfortAuthorization.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C0AED852E006EA60059C4D3 /* OpenfortAuthorizationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenfortAuthorizationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C0AED8F2E006EA60059C4D3 /* OpenfortAuthorizationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenfortAuthorizationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		4C0AED792E006E9C0059C4D3 /* OpenfortAuthorization */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = OpenfortAuthorization;
+			sourceTree = "<group>";
+		};
+		4C0AED882E006EA60059C4D3 /* OpenfortAuthorizationTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = OpenfortAuthorizationTests;
+			sourceTree = "<group>";
+		};
+		4C0AED922E006EA60059C4D3 /* OpenfortAuthorizationUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = OpenfortAuthorizationUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C0AED742E006E9C0059C4D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B91519592E4CC68F00642529 /* Web3ContractABI in Frameworks */,
+				B91518CD2E3120F200642529 /* FirebaseCore in Frameworks */,
+				B91518D42E3255A800642529 /* FirebaseAuth in Frameworks */,
+				4C8E5AC82E12CE280083528F /* OpenfortSwift in Frameworks */,
+				B915191C2E42424200642529 /* GoogleSignInSwift in Frameworks */,
+				B915195B2E4CC69600642529 /* Web3PromiseKit in Frameworks */,
+				B91519572E4CC47B00642529 /* Web3 in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C0AED822E006EA60059C4D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C0AED8C2E006EA60059C4D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C0AED6E2E006E9C0059C4D3 = {
+			isa = PBXGroup;
+			children = (
+				4C0AED792E006E9C0059C4D3 /* OpenfortAuthorization */,
+				4C0AED882E006EA60059C4D3 /* OpenfortAuthorizationTests */,
+				4C0AED922E006EA60059C4D3 /* OpenfortAuthorizationUITests */,
+				4C0AEDB42E0074800059C4D3 /* Frameworks */,
+				4C0AED782E006E9C0059C4D3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4C0AED782E006E9C0059C4D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C0AED772E006E9C0059C4D3 /* OpenfortAuthorization.app */,
+				4C0AED852E006EA60059C4D3 /* OpenfortAuthorizationTests.xctest */,
+				4C0AED8F2E006EA60059C4D3 /* OpenfortAuthorizationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C0AEDB42E0074800059C4D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C0AED762E006E9C0059C4D3 /* OpenfortAuthorization */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C0AED992E006EA60059C4D3 /* Build configuration list for PBXNativeTarget "OpenfortAuthorization" */;
+			buildPhases = (
+				4C0AED732E006E9C0059C4D3 /* Sources */,
+				4C0AED742E006E9C0059C4D3 /* Frameworks */,
+				4C0AED752E006E9C0059C4D3 /* Resources */,
+				4C05F2C32E007C5C0099E85E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				4C0AED792E006E9C0059C4D3 /* OpenfortAuthorization */,
+			);
+			name = OpenfortAuthorization;
+			packageProductDependencies = (
+				4C8E5AC72E12CE280083528F /* OpenfortSwift */,
+				B91518CC2E3120F200642529 /* FirebaseCore */,
+				B91518D32E3255A800642529 /* FirebaseAuth */,
+				B915191B2E42424200642529 /* GoogleSignInSwift */,
+				B91519562E4CC47B00642529 /* Web3 */,
+				B91519582E4CC68F00642529 /* Web3ContractABI */,
+				B915195A2E4CC69600642529 /* Web3PromiseKit */,
+			);
+			productName = OpenfortAuthorization;
+			productReference = 4C0AED772E006E9C0059C4D3 /* OpenfortAuthorization.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4C0AED842E006EA60059C4D3 /* OpenfortAuthorizationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C0AED9C2E006EA60059C4D3 /* Build configuration list for PBXNativeTarget "OpenfortAuthorizationTests" */;
+			buildPhases = (
+				4C0AED812E006EA60059C4D3 /* Sources */,
+				4C0AED822E006EA60059C4D3 /* Frameworks */,
+				4C0AED832E006EA60059C4D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C0AED872E006EA60059C4D3 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4C0AED882E006EA60059C4D3 /* OpenfortAuthorizationTests */,
+			);
+			name = OpenfortAuthorizationTests;
+			packageProductDependencies = (
+			);
+			productName = OpenfortAuthorizationTests;
+			productReference = 4C0AED852E006EA60059C4D3 /* OpenfortAuthorizationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4C0AED8E2E006EA60059C4D3 /* OpenfortAuthorizationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C0AED9F2E006EA60059C4D3 /* Build configuration list for PBXNativeTarget "OpenfortAuthorizationUITests" */;
+			buildPhases = (
+				4C0AED8B2E006EA60059C4D3 /* Sources */,
+				4C0AED8C2E006EA60059C4D3 /* Frameworks */,
+				4C0AED8D2E006EA60059C4D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C0AED912E006EA60059C4D3 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4C0AED922E006EA60059C4D3 /* OpenfortAuthorizationUITests */,
+			);
+			name = OpenfortAuthorizationUITests;
+			packageProductDependencies = (
+			);
+			productName = OpenfortAuthorizationUITests;
+			productReference = 4C0AED8F2E006EA60059C4D3 /* OpenfortAuthorizationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C0AED6F2E006E9C0059C4D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					4C0AED762E006E9C0059C4D3 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					4C0AED842E006EA60059C4D3 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 4C0AED762E006E9C0059C4D3;
+					};
+					4C0AED8E2E006EA60059C4D3 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 4C0AED762E006E9C0059C4D3;
+					};
+				};
+			};
+			buildConfigurationList = 4C0AED722E006E9C0059C4D3 /* Build configuration list for PBXProject "OpenfortAuthorization" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4C0AED6E2E006E9C0059C4D3;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				4C8E5AC62E12CE280083528F /* XCRemoteSwiftPackageReference "swift-sdk" */,
+				B91518C82E3116A600642529 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				B915191A2E42420300642529 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				B91519552E4CC16400642529 /* XCRemoteSwiftPackageReference "Web3.swift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 4C0AED782E006E9C0059C4D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C0AED762E006E9C0059C4D3 /* OpenfortAuthorization */,
+				4C0AED842E006EA60059C4D3 /* OpenfortAuthorizationTests */,
+				4C0AED8E2E006EA60059C4D3 /* OpenfortAuthorizationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C0AED752E006E9C0059C4D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C0AED832E006EA60059C4D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C0AED8D2E006EA60059C4D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C0AED732E006E9C0059C4D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C0AED812E006EA60059C4D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C0AED8B2E006EA60059C4D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C0AED872E006EA60059C4D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C0AED762E006E9C0059C4D3 /* OpenfortAuthorization */;
+			targetProxy = 4C0AED862E006EA60059C4D3 /* PBXContainerItemProxy */;
+		};
+		4C0AED912E006EA60059C4D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C0AED762E006E9C0059C4D3 /* OpenfortAuthorization */;
+			targetProxy = 4C0AED902E006EA60059C4D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4C0AED972E006EA60059C4D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4C0AED982E006EA60059C4D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		4C0AED9A2E006EA60059C4D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OpenfortAuthorization/OpenfortAuthorization.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = "$(SRCROOT)";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.openfort.OpenfortSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.5;
+			};
+			name = Debug;
+		};
+		4C0AED9B2E006EA60059C4D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OpenfortAuthorization/OpenfortAuthorization.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = "$(SRCROOT)";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.openfort.OpenfortSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.5;
+			};
+			name = Release;
+		};
+		4C0AED9D2E006EA60059C4D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.openfort.OpenfortAuthorizationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenfortAuthorization.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OpenfortAuthorization";
+				XROS_DEPLOYMENT_TARGET = 2.5;
+			};
+			name = Debug;
+		};
+		4C0AED9E2E006EA60059C4D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.openfort.OpenfortAuthorizationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenfortAuthorization.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OpenfortAuthorization";
+				XROS_DEPLOYMENT_TARGET = 2.5;
+			};
+			name = Release;
+		};
+		4C0AEDA02E006EA60059C4D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.openfort.OpenfortAuthorizationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = OpenfortAuthorization;
+				XROS_DEPLOYMENT_TARGET = 2.5;
+			};
+			name = Debug;
+		};
+		4C0AEDA12E006EA60059C4D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.openfort.OpenfortAuthorizationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = OpenfortAuthorization;
+				XROS_DEPLOYMENT_TARGET = 2.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C0AED722E006E9C0059C4D3 /* Build configuration list for PBXProject "OpenfortAuthorization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C0AED972E006EA60059C4D3 /* Debug */,
+				4C0AED982E006EA60059C4D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C0AED992E006EA60059C4D3 /* Build configuration list for PBXNativeTarget "OpenfortAuthorization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C0AED9A2E006EA60059C4D3 /* Debug */,
+				4C0AED9B2E006EA60059C4D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C0AED9C2E006EA60059C4D3 /* Build configuration list for PBXNativeTarget "OpenfortAuthorizationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C0AED9D2E006EA60059C4D3 /* Debug */,
+				4C0AED9E2E006EA60059C4D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C0AED9F2E006EA60059C4D3 /* Build configuration list for PBXNativeTarget "OpenfortAuthorizationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C0AEDA02E006EA60059C4D3 /* Debug */,
+				4C0AEDA12E006EA60059C4D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4C8E5AC62E12CE280083528F /* XCRemoteSwiftPackageReference "swift-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/openfort-xyz/swift-sdk.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		B91518C82E3116A600642529 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
+		B915191A2E42420300642529 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		B91519552E4CC16400642529 /* XCRemoteSwiftPackageReference "Web3.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Boilertalk/Web3.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4C8E5AC72E12CE280083528F /* OpenfortSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C8E5AC62E12CE280083528F /* XCRemoteSwiftPackageReference "swift-sdk" */;
+			productName = OpenfortSwift;
+		};
+		B91518CC2E3120F200642529 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B91518C82E3116A600642529 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		B91518D32E3255A800642529 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B91518C82E3116A600642529 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		B915191B2E42424200642529 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B915191A2E42420300642529 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		B91519562E4CC47B00642529 /* Web3 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B91519552E4CC16400642529 /* XCRemoteSwiftPackageReference "Web3.swift" */;
+			productName = Web3;
+		};
+		B91519582E4CC68F00642529 /* Web3ContractABI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B91519552E4CC16400642529 /* XCRemoteSwiftPackageReference "Web3.swift" */;
+			productName = Web3ContractABI;
+		};
+		B915195A2E4CC69600642529 /* Web3PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B91519552E4CC16400642529 /* XCRemoteSwiftPackageReference "Web3.swift" */;
+			productName = Web3PromiseKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 4C0AED6F2E006E9C0059C4D3 /* Project object */;
+}

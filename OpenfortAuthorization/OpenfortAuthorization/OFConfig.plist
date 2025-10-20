@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>backendUrl</key>
+	<string></string>
+	<key>iframeUrl</key>
+	<string>http://localhost:5174</string>
+	<key>openfortPublishableKey</key>
+	<string>pk_test_15238963-23a6-5e6b-a32c-8b8f27414db7</string>
+	<key>shieldPublishableKey</key>
+	<string>3a3ef549-5d4c-4f6d-b5cf-42881c23c2de</string>
+	<key>shieldUrl</key>
+	<string></string>
+	<key>debug</key>
+	<true/>
+</dict>
+</plist>
