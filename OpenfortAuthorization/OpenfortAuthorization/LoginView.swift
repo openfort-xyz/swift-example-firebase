@@ -11,7 +11,6 @@ import WebKit
 import OpenfortSwift
 import FirebaseAuth
 import FirebaseCore
-import GoogleSignIn
 import AuthenticationServices
 import CryptoKit
 import UIKit
