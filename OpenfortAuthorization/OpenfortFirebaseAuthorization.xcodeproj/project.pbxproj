@@ -10,7 +10,6 @@
 		4C8E5AC82E12CE280083528F /* OpenfortSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4C8E5AC72E12CE280083528F /* OpenfortSwift */; };
 		B91518CD2E3120F200642529 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = B91518CC2E3120F200642529 /* FirebaseCore */; };
 		B91518D42E3255A800642529 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B91518D32E3255A800642529 /* FirebaseAuth */; };
-		B915191C2E42424200642529 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B915191B2E42424200642529 /* GoogleSignInSwift */; };
 		B91519572E4CC47B00642529 /* Web3 in Frameworks */ = {isa = PBXBuildFile; productRef = B91519562E4CC47B00642529 /* Web3 */; };
 		B91519592E4CC68F00642529 /* Web3ContractABI in Frameworks */ = {isa = PBXBuildFile; productRef = B91519582E4CC68F00642529 /* Web3ContractABI */; };
 		B915195B2E4CC69600642529 /* Web3PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = B915195A2E4CC69600642529 /* Web3PromiseKit */; };
@@ -47,9 +46,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4C0AED772E006E9C0059C4D3 /* OpenfortAuthorization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenfortAuthorization.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C0AED852E006EA60059C4D3 /* OpenfortAuthorizationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenfortAuthorizationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C0AED8F2E006EA60059C4D3 /* OpenfortAuthorizationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenfortAuthorizationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C0AED772E006E9C0059C4D3 /* OpenfortFirebaseAuthorization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenfortFirebaseAuthorization.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C0AED852E006EA60059C4D3 /* OpenfortFirebaseAuthorizationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenfortFirebaseAuthorizationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C0AED8F2E006EA60059C4D3 /* OpenfortFirebaseAuthorizationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenfortFirebaseAuthorizationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -79,7 +78,6 @@
 				B91518CD2E3120F200642529 /* FirebaseCore in Frameworks */,
 				B91518D42E3255A800642529 /* FirebaseAuth in Frameworks */,
 				4C8E5AC82E12CE280083528F /* OpenfortSwift in Frameworks */,
-				B915191C2E42424200642529 /* GoogleSignInSwift in Frameworks */,
 				B915195B2E4CC69600642529 /* Web3PromiseKit in Frameworks */,
 				B91519572E4CC47B00642529 /* Web3 in Frameworks */,
 			);
@@ -116,9 +114,9 @@
 		4C0AED782E006E9C0059C4D3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4C0AED772E006E9C0059C4D3 /* OpenfortAuthorization.app */,
-				4C0AED852E006EA60059C4D3 /* OpenfortAuthorizationTests.xctest */,
-				4C0AED8F2E006EA60059C4D3 /* OpenfortAuthorizationUITests.xctest */,
+				4C0AED772E006E9C0059C4D3 /* OpenfortFirebaseAuthorization.app */,
+				4C0AED852E006EA60059C4D3 /* OpenfortFirebaseAuthorizationTests.xctest */,
+				4C0AED8F2E006EA60059C4D3 /* OpenfortFirebaseAuthorizationUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,9 +131,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4C0AED762E006E9C0059C4D3 /* OpenfortAuthorization */ = {
+		4C0AED762E006E9C0059C4D3 /* OpenfortFirebaseAuthorization */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C0AED992E006EA60059C4D3 /* Build configuration list for PBXNativeTarget "OpenfortAuthorization" */;
+			buildConfigurationList = 4C0AED992E006EA60059C4D3 /* Build configuration list for PBXNativeTarget "OpenfortFirebaseAuthorization" */;
 			buildPhases = (
 				4C0AED732E006E9C0059C4D3 /* Sources */,
 				4C0AED742E006E9C0059C4D3 /* Frameworks */,
@@ -149,23 +147,22 @@
 			fileSystemSynchronizedGroups = (
 				4C0AED792E006E9C0059C4D3 /* OpenfortAuthorization */,
 			);
-			name = OpenfortAuthorization;
+			name = OpenfortFirebaseAuthorization;
 			packageProductDependencies = (
 				4C8E5AC72E12CE280083528F /* OpenfortSwift */,
 				B91518CC2E3120F200642529 /* FirebaseCore */,
 				B91518D32E3255A800642529 /* FirebaseAuth */,
-				B915191B2E42424200642529 /* GoogleSignInSwift */,
 				B91519562E4CC47B00642529 /* Web3 */,
 				B91519582E4CC68F00642529 /* Web3ContractABI */,
 				B915195A2E4CC69600642529 /* Web3PromiseKit */,
 			);
 			productName = OpenfortAuthorization;
-			productReference = 4C0AED772E006E9C0059C4D3 /* OpenfortAuthorization.app */;
+			productReference = 4C0AED772E006E9C0059C4D3 /* OpenfortFirebaseAuthorization.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4C0AED842E006EA60059C4D3 /* OpenfortAuthorizationTests */ = {
+		4C0AED842E006EA60059C4D3 /* OpenfortFirebaseAuthorizationTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C0AED9C2E006EA60059C4D3 /* Build configuration list for PBXNativeTarget "OpenfortAuthorizationTests" */;
+			buildConfigurationList = 4C0AED9C2E006EA60059C4D3 /* Build configuration list for PBXNativeTarget "OpenfortFirebaseAuthorizationTests" */;
 			buildPhases = (
 				4C0AED812E006EA60059C4D3 /* Sources */,
 				4C0AED822E006EA60059C4D3 /* Frameworks */,
@@ -179,16 +176,16 @@
 			fileSystemSynchronizedGroups = (
 				4C0AED882E006EA60059C4D3 /* OpenfortAuthorizationTests */,
 			);
-			name = OpenfortAuthorizationTests;
+			name = OpenfortFirebaseAuthorizationTests;
 			packageProductDependencies = (
 			);
 			productName = OpenfortAuthorizationTests;
-			productReference = 4C0AED852E006EA60059C4D3 /* OpenfortAuthorizationTests.xctest */;
+			productReference = 4C0AED852E006EA60059C4D3 /* OpenfortFirebaseAuthorizationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4C0AED8E2E006EA60059C4D3 /* OpenfortAuthorizationUITests */ = {
+		4C0AED8E2E006EA60059C4D3 /* OpenfortFirebaseAuthorizationUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C0AED9F2E006EA60059C4D3 /* Build configuration list for PBXNativeTarget "OpenfortAuthorizationUITests" */;
+			buildConfigurationList = 4C0AED9F2E006EA60059C4D3 /* Build configuration list for PBXNativeTarget "OpenfortFirebaseAuthorizationUITests" */;
 			buildPhases = (
 				4C0AED8B2E006EA60059C4D3 /* Sources */,
 				4C0AED8C2E006EA60059C4D3 /* Frameworks */,
@@ -202,11 +199,11 @@
 			fileSystemSynchronizedGroups = (
 				4C0AED922E006EA60059C4D3 /* OpenfortAuthorizationUITests */,
 			);
-			name = OpenfortAuthorizationUITests;
+			name = OpenfortFirebaseAuthorizationUITests;
 			packageProductDependencies = (
 			);
 			productName = OpenfortAuthorizationUITests;
-			productReference = 4C0AED8F2E006EA60059C4D3 /* OpenfortAuthorizationUITests.xctest */;
+			productReference = 4C0AED8F2E006EA60059C4D3 /* OpenfortFirebaseAuthorizationUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -232,7 +229,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4C0AED722E006E9C0059C4D3 /* Build configuration list for PBXProject "OpenfortAuthorization" */;
+			buildConfigurationList = 4C0AED722E006E9C0059C4D3 /* Build configuration list for PBXProject "OpenfortFirebaseAuthorization" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -244,7 +241,6 @@
 			packageReferences = (
 				4C8E5AC62E12CE280083528F /* XCRemoteSwiftPackageReference "swift-sdk" */,
 				B91518C82E3116A600642529 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				B915191A2E42420300642529 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				B91519552E4CC16400642529 /* XCRemoteSwiftPackageReference "Web3.swift" */,
 			);
 			preferredProjectObjectVersion = 77;
@@ -252,9 +248,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4C0AED762E006E9C0059C4D3 /* OpenfortAuthorization */,
-				4C0AED842E006EA60059C4D3 /* OpenfortAuthorizationTests */,
-				4C0AED8E2E006EA60059C4D3 /* OpenfortAuthorizationUITests */,
+				4C0AED762E006E9C0059C4D3 /* OpenfortFirebaseAuthorization */,
+				4C0AED842E006EA60059C4D3 /* OpenfortFirebaseAuthorizationTests */,
+				4C0AED8E2E006EA60059C4D3 /* OpenfortFirebaseAuthorizationUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -310,12 +306,12 @@
 /* Begin PBXTargetDependency section */
 		4C0AED872E006EA60059C4D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4C0AED762E006E9C0059C4D3 /* OpenfortAuthorization */;
+			target = 4C0AED762E006E9C0059C4D3 /* OpenfortFirebaseAuthorization */;
 			targetProxy = 4C0AED862E006EA60059C4D3 /* PBXContainerItemProxy */;
 		};
 		4C0AED912E006EA60059C4D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4C0AED762E006E9C0059C4D3 /* OpenfortAuthorization */;
+			target = 4C0AED762E006E9C0059C4D3 /* OpenfortFirebaseAuthorization */;
 			targetProxy = 4C0AED902E006EA60059C4D3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -526,7 +522,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenfortAuthorization.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OpenfortAuthorization";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenfortFirebaseAuthorization.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OpenfortFirebaseAuthorization";
 				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
 			name = Debug;
@@ -548,7 +544,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenfortAuthorization.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OpenfortAuthorization";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenfortFirebaseAuthorization.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OpenfortFirebaseAuthorization";
 				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
 			name = Release;
@@ -598,7 +594,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4C0AED722E006E9C0059C4D3 /* Build configuration list for PBXProject "OpenfortAuthorization" */ = {
+		4C0AED722E006E9C0059C4D3 /* Build configuration list for PBXProject "OpenfortFirebaseAuthorization" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C0AED972E006EA60059C4D3 /* Debug */,
@@ -607,7 +603,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C0AED992E006EA60059C4D3 /* Build configuration list for PBXNativeTarget "OpenfortAuthorization" */ = {
+		4C0AED992E006EA60059C4D3 /* Build configuration list for PBXNativeTarget "OpenfortFirebaseAuthorization" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C0AED9A2E006EA60059C4D3 /* Debug */,
@@ -616,7 +612,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C0AED9C2E006EA60059C4D3 /* Build configuration list for PBXNativeTarget "OpenfortAuthorizationTests" */ = {
+		4C0AED9C2E006EA60059C4D3 /* Build configuration list for PBXNativeTarget "OpenfortFirebaseAuthorizationTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C0AED9D2E006EA60059C4D3 /* Debug */,
@@ -625,7 +621,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C0AED9F2E006EA60059C4D3 /* Build configuration list for PBXNativeTarget "OpenfortAuthorizationUITests" */ = {
+		4C0AED9F2E006EA60059C4D3 /* Build configuration list for PBXNativeTarget "OpenfortFirebaseAuthorizationUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C0AEDA02E006EA60059C4D3 /* Debug */,
@@ -653,14 +649,6 @@
 				minimumVersion = 12.0.0;
 			};
 		};
-		B915191A2E42420300642529 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
 		B91519552E4CC16400642529 /* XCRemoteSwiftPackageReference "Web3.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Boilertalk/Web3.swift.git";
@@ -686,11 +674,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B91518C82E3116A600642529 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
-		};
-		B915191B2E42424200642529 /* GoogleSignInSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B915191A2E42420300642529 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
-			productName = GoogleSignInSwift;
 		};
 		B91519562E4CC47B00642529 /* Web3 */ = {
 			isa = XCSwiftPackageProductDependency;

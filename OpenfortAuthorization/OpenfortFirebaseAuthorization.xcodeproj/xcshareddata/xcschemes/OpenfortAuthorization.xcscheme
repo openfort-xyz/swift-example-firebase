@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4C0AED762E006E9C0059C4D3"
-               BuildableName = "OpenfortAuthorization.app"
-               BlueprintName = "OpenfortAuthorization"
-               ReferencedContainer = "container:OpenfortAuthorization.xcodeproj">
+               BuildableName = "OpenfortFirebaseAuthorization.app"
+               BlueprintName = "OpenfortFirebaseAuthorization"
+               ReferencedContainer = "container:OpenfortFirebaseAuthorization.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -36,9 +36,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4C0AED842E006EA60059C4D3"
-               BuildableName = "OpenfortAuthorizationTests.xctest"
-               BlueprintName = "OpenfortAuthorizationTests"
-               ReferencedContainer = "container:OpenfortAuthorization.xcodeproj">
+               BuildableName = "OpenfortFirebaseAuthorizationTests.xctest"
+               BlueprintName = "OpenfortFirebaseAuthorizationTests"
+               ReferencedContainer = "container:OpenfortFirebaseAuthorization.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4C0AED8E2E006EA60059C4D3"
-               BuildableName = "OpenfortAuthorizationUITests.xctest"
-               BlueprintName = "OpenfortAuthorizationUITests"
-               ReferencedContainer = "container:OpenfortAuthorization.xcodeproj">
+               BuildableName = "OpenfortFirebaseAuthorizationUITests.xctest"
+               BlueprintName = "OpenfortFirebaseAuthorizationUITests"
+               ReferencedContainer = "container:OpenfortFirebaseAuthorization.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -69,9 +69,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4C0AED762E006E9C0059C4D3"
-            BuildableName = "OpenfortAuthorization.app"
-            BlueprintName = "OpenfortAuthorization"
-            ReferencedContainer = "container:OpenfortAuthorization.xcodeproj">
+            BuildableName = "OpenfortFirebaseAuthorization.app"
+            BlueprintName = "OpenfortFirebaseAuthorization"
+            ReferencedContainer = "container:OpenfortFirebaseAuthorization.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -86,9 +86,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4C0AED762E006E9C0059C4D3"
-            BuildableName = "OpenfortAuthorization.app"
-            BlueprintName = "OpenfortAuthorization"
-            ReferencedContainer = "container:OpenfortAuthorization.xcodeproj">
+            BuildableName = "OpenfortFirebaseAuthorization.app"
+            BlueprintName = "OpenfortFirebaseAuthorization"
+            ReferencedContainer = "container:OpenfortFirebaseAuthorization.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
