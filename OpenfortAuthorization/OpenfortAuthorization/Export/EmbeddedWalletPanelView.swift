@@ -10,7 +10,8 @@ import OpenfortSwift
 
 struct EmbeddedWalletPanelView: View {
     let handleSetMessage: (String) -> Void
-    let viewModel = EmbeddedWalletPanelViewModel()
+    let viewModel: EmbeddedWalletPanelViewModel
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("Embedded wallet").font(.headline)
@@ -41,6 +42,12 @@ struct EmbeddedWalletPanelView: View {
 
 class EmbeddedWalletPanelViewModel: ObservableObject {
     @Published var embeddedState: OFEmbeddedState = .none
+    @Published var embeddedAccount: OFEmbeddedAccount?
+    
+    init(embeddedState: OFEmbeddedState, embeddedAccount: OFEmbeddedAccount?) {
+        self.embeddedState = embeddedState
+        self.embeddedAccount = embeddedAccount
+    }
     
     func exportPrivateKey() async throws -> String {
          try await OFSDK.shared.exportPrivateKey() ?? ""
@@ -49,7 +56,17 @@ class EmbeddedWalletPanelViewModel: ObservableObject {
     @MainActor
     func setWalletRecovery(method: String, password: String?) async throws {
         do {
-            try await OFSDK.shared.setEmbeddedRecovery(params: OFSetEmbeddedRecoveryParams(recoveryMethod: method, recoveryPassword: password ?? "", encryptionSession: ""))
+            let session = try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<String, Error>) in
+                getEncryptionSession { result in
+                    print("[HomeViewModel] Encryption session result: \(result)")
+                    continuation.resume(with: result)
+                }
+            }
+            if embeddedAccount?.recoveryMethod == .password {
+                try await OFSDK.shared.setRecoveryMethod(params: OFSetRecoveryMethodParams(previousRecovery: OFRecoveryParamsDTO(recoveryMethod: .password, password: password),  newRecovery: OFRecoveryParamsDTO(recoveryMethod: .automatic, encryptionSession: session)))
+            } else {
+                try await OFSDK.shared.setRecoveryMethod(params: OFSetRecoveryMethodParams(previousRecovery: OFRecoveryParamsDTO(recoveryMethod: .automatic, encryptionSession: session), newRecovery: OFRecoveryParamsDTO(recoveryMethod: .password, password: password)))
+            }
         } catch {
             throw error
         }
