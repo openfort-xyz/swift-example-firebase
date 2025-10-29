@@ -70,8 +70,8 @@ struct HomeView: View {
                                 }
                                 .tint(.red)
                                 VStack(spacing: 20) {
-                                    // Account actions
-                                    AccountActionsView(handleSetMessage: viewModel.handleSetMessage)
+                                    /*// Account actions
+                                    AccountActionsView(handleSetMessage: viewModel.handleSetMessage)*/
                                     
                                     // Signatures
                                     SignaturesPanelView(handleSetMessage: viewModel.handleSetMessage, embeddedState: viewModel.state)
@@ -82,11 +82,11 @@ struct HomeView: View {
                                     // Embedded wallet
                                     EmbeddedWalletPanelView(handleSetMessage: viewModel.handleSetMessage, viewModel: EmbeddedWalletPanelViewModel(embeddedState: viewModel.state, embeddedAccount: viewModel.embeddedAccount))
                                     
-                                    // Wallet Connect
+                                    /*// Wallet Connect
                                     WalletConnectPanelView(viewModel: WalletConnectPanelViewModel())
                                     
                                     // Funding
-                                    FundingPanelView(handleSetMessage: viewModel.handleSetMessage)
+                                    FundingPanelView(handleSetMessage: viewModel.handleSetMessage)*/
                                 }
                                 .padding(.top, 12)
                             }
