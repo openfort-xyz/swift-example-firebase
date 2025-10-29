@@ -80,7 +80,7 @@ struct HomeView: View {
                                     LinkedSocialsPanelView(user: viewModel.user, handleSetMessage: viewModel.handleSetMessage)
                                     
                                     // Embedded wallet
-                                    EmbeddedWalletPanelView(handleSetMessage: viewModel.handleSetMessage)
+                                    EmbeddedWalletPanelView(handleSetMessage: viewModel.handleSetMessage, viewModel: EmbeddedWalletPanelViewModel(embeddedState: viewModel.state, embeddedAccount: viewModel.embeddedAccount))
                                     
                                     // Wallet Connect
                                     WalletConnectPanelView(viewModel: WalletConnectPanelViewModel())
@@ -195,6 +195,7 @@ struct SidebarIntroView: View {
 class HomeViewModel: ObservableObject {
     @Published var state: OFEmbeddedState = .none
     @Published var user: OFGetUserInstanceResponse?
+    @Published var embeddedAccount: OFEmbeddedAccount?
     @Published var message: String = ""
     var onLogout: (() -> Void)?
     
@@ -214,6 +215,7 @@ class HomeViewModel: ObservableObject {
                 let recoveryParams = OFRecoveryParamsDTO(recoveryMethod: .password, encryptionSession: nil, password: password, passkeyInfo: nil)
                 print("[HomeViewModel] Calling OFSDK.shared.configure...")
                 let result = try await OFSDK.shared.configure(params: OFConfigureEmbeddedWalletDTO(chainId: chainId, recoveryParams: recoveryParams))
+                self.embeddedAccount = result
                 print("[HomeViewModel] Configure succeeded! Result: \(String(describing: result))")
                 self.message = "Embedded wallet configured successfully with password recovery.\n\n" + self.message
             } else {
@@ -231,6 +233,7 @@ class HomeViewModel: ObservableObject {
                 let recoveryParams = OFRecoveryParamsDTO(recoveryMethod: .automatic, encryptionSession: session, password: nil, passkeyInfo: nil)
                 print("[HomeViewModel] Calling OFSDK.shared.configure...")
                 let result = try await OFSDK.shared.configure(params: OFConfigureEmbeddedWalletDTO(chainId: chainId, recoveryParams: recoveryParams))
+                self.embeddedAccount = result
                 print("[HomeViewModel] Configure succeeded! Result: \(String(describing: result))")
                 self.message = "Embedded wallet configured successfully with automatic recovery.\n\n" + self.message
             }
