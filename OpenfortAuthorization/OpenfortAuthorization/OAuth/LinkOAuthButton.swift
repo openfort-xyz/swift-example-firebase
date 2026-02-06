@@ -10,14 +10,14 @@ import OpenfortSwift
 
 struct LinkOAuthButton: View {
     let provider: String
-    let user: OFGetUserInstanceResponse?
+    let user: OFUser?
     @State private var isLoading = false
     
     var handleSetMessage: ((String) -> Void)? = nil
 
     var isLinked: Bool {
         guard let user = user else { return false }
-        let linkedAccounts = user.linkedAccounts
+        let linkedAccounts = user.linkedAccounts ?? []
         return linkedAccounts.contains(where: { $0.provider == provider })
     }
 

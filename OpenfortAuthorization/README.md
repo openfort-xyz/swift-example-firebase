@@ -1,18 +1,19 @@
-# Quickstart
+# Openfort Firebase Authorization Example
 
-This is a companion project to the [Openfort Swift Quickstart guide](https://github.com/openfort-xyz/swift-sdk).  
-It demonstrates the basic use of the [Openfort Swift SDK](https://github.com/openfort-xyz/swift-sdk) in a SwiftUI application.
+This is a companion project to the [Openfort Swift SDK](https://github.com/openfort-xyz/swift-sdk).
+It demonstrates integrating the Openfort embedded wallet with Firebase Authentication in a SwiftUI application.
 
 ## Overview
 
-This quickstart example shows how to:
+This example shows how to:
 
-- Configure the Openfort Swift SDK in a SwiftUI application
-- Set up and use the `OFConfig.plist` file
-- Implement sign-in and sign-up flows
-- Handle authenticated and unauthenticated states
-- Display the user profile and wallet information
-- Demonstrate account linking, embedded wallets, and logout flows
+- Initialize the Openfort SDK with Firebase as the third-party auth provider
+- Implement sign-in and sign-up flows (email/password, Apple Sign-In, OAuth, guest)
+- Configure embedded wallet recovery (password-based or automatic)
+- Manage multiple smart account wallets across chains
+- Sign messages and EIP-712 typed data
+- Link OAuth social accounts to a user profile
+- Export private keys for wallet backup
 
 ## Setup
 
@@ -20,19 +21,30 @@ This quickstart example shows how to:
 
 1. Sign up at [openfort.io](https://openfort.io)
 2. Create a new project in your Openfort Dashboard
-3. Copy your **Publishable Key** and **Shield Keys** from the Developers section
+3. Copy your **Publishable Key** and **Shield Publishable Key** from the Developers section
 
-### 2. Configure the Example
+### 2. Configure Firebase
 
-Open OFConfig.plist and configure the following keys:
-   - `backendURL` – Your backend API base URL (optional)
-   - `iframeURL` – URL of your iframe environment (optional)
-   - `openfortPublishableKey` – Your Openfort publishable key
-   - `shieldPublishableKey` – Your Shield publishable key
-   - `shieldEncryptionKey` – Your Shield encryption key
-   - `shieldURL` – Shield service URL (optional)
+1. Create a project at [Firebase Console](https://console.firebase.google.com)
+2. Enable Authentication with desired providers (Email/Password, Anonymous, Apple, Google)
+3. Add an iOS app with bundle ID `com.openfort.noncustodial`
+4. Download `GoogleService-Info.plist` and place it at:
+   ```
+   OpenfortAuthorization/GoogleService-Info.plist
+   ```
 
-### 3. Run the App
+### 3. Configure the Example
 
-1. Choose your target device/simulator
-2. Build and run the project (⌘+R)
+Open `OpenfortAuthorization/OFConfig.plist` and set:
+
+- `openfortPublishableKey` - Your Openfort publishable key (required)
+- `shieldPublishableKey` - Your Shield publishable key (required)
+- `backendUrl` - Backend API base URL (optional)
+- `shieldUrl` - Shield service URL (optional)
+- `debug` - Enable debug logging (optional, boolean)
+
+### 4. Run the App
+
+1. Open `OpenfortFirebaseAuthorization.xcodeproj` in Xcode
+2. Choose your target device or simulator (iOS 16.6+)
+3. Build and run (⌘+R)
