@@ -9,9 +9,9 @@ import SwiftUI
 import OpenfortSwift
 
 struct LinkedSocialsPanelView: View {
-    let user: OFGetUserInstanceResponse?
+    let user: OFUser?
     let handleSetMessage: (String) -> Void
-    @State var userResponse: OFGetUserInstanceResponse?
+    @State var userResponse: OFUser?
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {

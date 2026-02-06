@@ -6,18 +6,15 @@
 //
 
 import SwiftUI
-import WebKit
-import OpenfortSwift
+import FirebaseAuth
 
 struct ForgotPasswordView: View {
     // MARK: - State
-    @State private var email: String = UserDefaults.standard.string(forKey: "openfort:email") ?? ""
+    @State private var email: String = ""
     @State private var isLoading: Bool = false
     @State private var toastMessage: String = ""
     @State private var toastType: ForgotPasswordStatusType = .none
     @State private var showToast: Bool = false
-    @State private var showResetPassword = false
-    @State private var resetState: String = ""
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
@@ -50,24 +47,9 @@ struct ForgotPasswordView: View {
                 }
                 toastView
             }
-            .onAppear { Task { await checkExistingSession() } }
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
             .background(Color(.systemGroupedBackground).ignoresSafeArea())
-            .onOpenURL { url in
-                print("Opened from link:", url)
-                
-                if url.host == "reset-password",
-                   let state = URLComponents(url: url, resolvingAgainstBaseURL: false)?
-                                .queryItems?
-                                .first(where: { $0.name == "state" })?.value {
-                    print("State:", state)
-                    resetState = state
-                    showResetPassword = true
-                }
-            }.navigationDestination(isPresented: $showResetPassword) {
-                ResetPasswordView(state: resetState, email: email)
-            }
         }
     }
 
@@ -78,37 +60,20 @@ struct ForgotPasswordView: View {
         showToast = false
 
         do {
-            let redirect = redirectURLString()
-            let params = OFRequestResetPasswordParams(email: email, redirectUrl: redirect)
-            try await OFSDK.shared.requestResetPassword(params: params)
+            try await Auth.auth().sendPasswordReset(withEmail: email)
             toastMessage = "Successfully sent email"
             toastType = .success
             showToast = true
         } catch {
-            toastMessage = "Error sending email"
+            toastMessage = "Error sending email: \(error.localizedDescription)"
             toastType = .error
             showToast = true
         }
         isLoading = false
     }
-    
-    private func checkExistingSession() async {
-        do {
-            if let _ = try await OFSDK.shared.getUser() {
-                dismiss()
-            }
-        } catch {
-            // Ignore errors; stay on this screen
-        }
-    }
 
     // MARK: - Helpers
-    private func redirectURLString() -> String {
-        return RedirectManager.makeLink(path: "reset-password")?.absoluteString ?? ""
-    }
-
     private func isValidEmail(_ email: String) -> Bool {
-        // Simple validation, adequate for UI enable/disable
         let pattern = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
         return email.range(of: pattern, options: .regularExpression) != nil
     }
@@ -131,12 +96,12 @@ struct ForgotPasswordView: View {
             }
         }
     }
-    
+
     private var sendResetEmailButton: some View {
         Button(action: { Task { await handleSubmit() } }) {
             HStack {
                 if isLoading { ProgressView() }
-                Text(isLoading ? "Sending…" : "Send Reset Email")
+                Text(isLoading ? "Sending..." : "Send Reset Email")
                     .frame(maxWidth: .infinity)
             }
         }
@@ -144,7 +109,7 @@ struct ForgotPasswordView: View {
         .disabled(isLoading || !isValidEmail(email))
         .padding(.top, 8)
     }
-    
+
     private var toastView: some View {
         Group {
             if showToast {
@@ -166,7 +131,6 @@ struct ForgotPasswordView: View {
                 .transition(.move(edge: .bottom).combined(with: .opacity))
                 .animation(.easeInOut(duration: 0.25), value: showToast)
                 .onAppear {
-                    // Auto-hide after a short delay
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) {
                         withAnimation { showToast = false }
                     }
@@ -176,12 +140,9 @@ struct ForgotPasswordView: View {
     }
 }
 
-// You can unify this with your existing StatusType if present elsewhere
 enum ForgotPasswordStatusType {
     case none
     case loading
     case success
     case error
 }
-
-    

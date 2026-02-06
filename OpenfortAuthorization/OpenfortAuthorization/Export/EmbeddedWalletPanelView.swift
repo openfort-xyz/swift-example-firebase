@@ -56,12 +56,7 @@ class EmbeddedWalletPanelViewModel: ObservableObject {
     @MainActor
     func setWalletRecovery(method: String, password: String?) async throws {
         do {
-            let session = try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<String, Error>) in
-                getEncryptionSession { result in
-                    print("[HomeViewModel] Encryption session result: \(result)")
-                    continuation.resume(with: result)
-                }
-            }
+            let session = try await getEncryptionSession()
             if embeddedAccount?.recoveryMethod == .password {
                 try await OFSDK.shared.setRecoveryMethod(params: OFSetRecoveryMethodParams(previousRecovery: OFRecoveryParamsDTO(recoveryMethod: .password, password: password),  newRecovery: OFRecoveryParamsDTO(recoveryMethod: .automatic, encryptionSession: session)))
             } else {

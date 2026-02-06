@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import OpenfortSwift
+import FirebaseAuth
 
 struct ResetPasswordView: View {
     @State private var password: String = ""
@@ -14,19 +14,19 @@ struct ResetPasswordView: View {
     @State private var isLoading: Bool = false
     @State private var error: String?
     @State private var status: Status?
-    
+
     @Environment(\.dismiss) private var dismiss
-    
+
     let state: String
     let email: String
-    
+
     enum StatusType {
         case idle, loading, success, error(String)
     }
     struct Status {
         var type: StatusType
     }
-    
+
     var body: some View {
         ZStack {
             Color(.systemGroupedBackground).ignoresSafeArea()
@@ -37,7 +37,7 @@ struct ResetPasswordView: View {
                         .font(.system(size: 24, weight: .semibold))
                         .foregroundColor(.primary)
                         .padding(.bottom, 24)
-                    
+
                     VStack(spacing: 24) {
                         VStack(alignment: .leading) {
                             HStack {
@@ -60,7 +60,7 @@ struct ResetPasswordView: View {
                                     .stroke(Color.gray.opacity(0.3), lineWidth: 1)
                             )
                             .background(Color.white)
-                            
+
                             Text("Your password must be at least 8 characters including a lowercase letter, an uppercase letter, and a special character (e.g. !@#%&*).")
                                 .font(.caption)
                                 .foregroundColor(error == "invalidPassword" ? .red : .gray)
@@ -68,7 +68,7 @@ struct ResetPasswordView: View {
                                 .padding(.top, 4)
                         }
                     }
-                    
+
                     Button(action: {
                         submit()
                     }) {
@@ -88,7 +88,7 @@ struct ResetPasswordView: View {
                     .foregroundColor(.white)
                     .cornerRadius(8)
                     .padding(.top, 24)
-                    
+
                     HStack {
                         Text("Already have an account?")
                             .font(.subheadline)
@@ -106,31 +106,29 @@ struct ResetPasswordView: View {
                 .cornerRadius(16)
                 .shadow(color: Color.black.opacity(0.10), radius: 10, x: 0, y: 4)
                 .padding(.horizontal, 8)
-                
+
                 Spacer()
             }
             .padding(.top, 20)
             .toast(status: status, setStatus: { status = $0 })
         }
     }
-    
+
     func submit() {
         isLoading = true
         error = nil
-        // Validate password
         if !validatePassword(password) {
             error = "invalidPassword"
             isLoading = false
             return
         }
-    
+
         Task {
             defer { isLoading = false }
             do {
-                let params = OFResetPasswordParams(email: email, password: password, state: state)
-                try await OFSDK.shared.resetPassword(params: params)
+                // state contains the oobCode from the Firebase password reset email
+                try await Auth.auth().confirmPasswordReset(withCode: state, newPassword: password)
                 status = Status(type: .success)
-                // Optionally dismiss after a short delay
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
                     dismiss()
                 }
@@ -139,9 +137,8 @@ struct ResetPasswordView: View {
             }
         }
     }
-    
+
     func validatePassword(_ pw: String) -> Bool {
-        // Example: at least 8 chars, lowercase, uppercase, special char
         let lower = pw.range(of: "[a-z]", options: .regularExpression) != nil
         let upper = pw.range(of: "[A-Z]", options: .regularExpression) != nil
         let special = pw.range(of: "[!@#%&*]", options: .regularExpression) != nil
@@ -149,7 +146,6 @@ struct ResetPasswordView: View {
     }
 }
 
-// Example Toast modifier for showing status messages (dummy):
 extension View {
     func toast(status: ResetPasswordView.Status?, setStatus: @escaping (ResetPasswordView.Status?) -> Void) -> some View {
         ZStack {

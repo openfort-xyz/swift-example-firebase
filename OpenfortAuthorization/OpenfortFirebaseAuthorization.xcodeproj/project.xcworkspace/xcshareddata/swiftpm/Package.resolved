@@ -1,5 +1,5 @@
 {
-  "originHash" : "4f7ae1d93f8f6fb906d891eb359c6377128f3adb757bf82db36ddcea998b7315",
+  "originHash" : "c74079526bc9f3f6620e8743461055ed16cde66c41d9bed2abcc8bcfb61eefce",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -17,15 +17,6 @@
       "state" : {
         "revision" : "61b85103a1aeed8218f17c794687781505fbbef5",
         "version" : "11.2.0"
-      }
-    },
-    {
-      "identity" : "appauth-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/openid/AppAuth-iOS.git",
-      "state" : {
-        "revision" : "145104f5ea9d58ae21b60add007c33c1cc0c948e",
-        "version" : "2.0.0"
       }
     },
     {
@@ -83,15 +74,6 @@
       }
     },
     {
-      "identity" : "googlesignin-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/google/GoogleSignIn-iOS",
-      "state" : {
-        "revision" : "3996d908c7b3ce8a87d39c808f9a6b2a08fbe043",
-        "version" : "9.0.0"
-      }
-    },
-    {
       "identity" : "googleutilities",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleUtilities.git",
@@ -116,15 +98,6 @@
       "state" : {
         "revision" : "a2ab612cb980066ee56d90d60d8462992c07f24b",
         "version" : "3.5.0"
-      }
-    },
-    {
-      "identity" : "gtmappauth",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/google/GTMAppAuth.git",
-      "state" : {
-        "revision" : "56e0ccf09a6dd29dc7e68bdf729598240ca8aa16",
-        "version" : "5.0.0"
       }
     },
     {
@@ -340,7 +313,7 @@
       "location" : "https://github.com/openfort-xyz/swift-sdk.git",
       "state" : {
         "branch" : "main",
-        "revision" : "3fbb57c7e560eb08f400f166f725a6b09d7abc28"
+        "revision" : "7558e0d07fd59941f5e7c70f818070afdb1c09ac"
       }
     },
     {
@@ -366,8 +339,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Boilertalk/Web3.swift.git",
       "state" : {
-        "branch" : "master",
-        "revision" : "b85187ddf230a10b04fa8574c44980f3369ddff5"
+        "revision" : "b85187ddf230a10b04fa8574c44980f3369ddff5",
+        "version" : "0.8.8"
       }
     },
     {

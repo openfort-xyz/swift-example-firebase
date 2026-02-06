@@ -24,7 +24,7 @@ struct HomeView: View {
                             VStack(spacing: 18) {
                                 Text("Set up your embedded signer")
                                     .font(.title2).bold()
-                                Text("Welcome, \(viewModel.user?.player?.name ?? viewModel.user?.id ?? "User")!")
+                                Text("Welcome, \(viewModel.user?.name ?? viewModel.user?.id ?? "User")!")
                                     .foregroundColor(.gray)
                                 // Logout
                                 HStack {
@@ -194,7 +194,7 @@ struct SidebarIntroView: View {
 @MainActor
 class HomeViewModel: ObservableObject {
     @Published var state: OFEmbeddedState = .none
-    @Published var user: OFGetUserInstanceResponse?
+    @Published var user: OFUser?
     @Published var embeddedAccount: OFEmbeddedAccount?
     @Published var message: String = ""
     var onLogout: (() -> Void)?
@@ -214,7 +214,7 @@ class HomeViewModel: ObservableObject {
 
                 let recoveryParams = OFRecoveryParamsDTO(recoveryMethod: .password, encryptionSession: nil, password: password, passkeyInfo: nil)
                 print("[HomeViewModel] Calling OFSDK.shared.configure...")
-                let result = try await OFSDK.shared.configure(params: OFConfigureEmbeddedWalletDTO(chainId: chainId, recoveryParams: recoveryParams))
+                let result = try await OFSDK.shared.configure(params: OFEmbeddedAccountConfigureParams(chainId: chainId, recoveryParams: recoveryParams))
                 self.embeddedAccount = result
                 print("[HomeViewModel] Configure succeeded! Result: \(String(describing: result))")
                 self.message = "Embedded wallet configured successfully with password recovery.\n\n" + self.message
@@ -222,17 +222,12 @@ class HomeViewModel: ObservableObject {
                 print("[HomeViewModel] Using automatic recovery method")
                 // For automatic recovery, we need to fetch the encryption session first
                 print("[HomeViewModel] Fetching encryption session...")
-                let session = try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<String, Error>) in
-                    getEncryptionSession { result in
-                        print("[HomeViewModel] Encryption session result: \(result)")
-                        continuation.resume(with: result)
-                    }
-                }
+                let session = try await getEncryptionSession()
                 print("[HomeViewModel] Got encryption session: \(session.prefix(20))...")
 
                 let recoveryParams = OFRecoveryParamsDTO(recoveryMethod: .automatic, encryptionSession: session, password: nil, passkeyInfo: nil)
                 print("[HomeViewModel] Calling OFSDK.shared.configure...")
-                let result = try await OFSDK.shared.configure(params: OFConfigureEmbeddedWalletDTO(chainId: chainId, recoveryParams: recoveryParams))
+                let result = try await OFSDK.shared.configure(params: OFEmbeddedAccountConfigureParams(chainId: chainId, recoveryParams: recoveryParams))
                 self.embeddedAccount = result
                 print("[HomeViewModel] Configure succeeded! Result: \(String(describing: result))")
                 self.message = "Embedded wallet configured successfully with automatic recovery.\n\n" + self.message
@@ -270,6 +265,7 @@ class HomeViewModel: ObservableObject {
     func logout() async {
         do {
             try await OFSDK.shared.logOut()
+            try? Auth.auth().signOut()
         } catch let error {
             message = "Error logging out: \(error)\n\n" + message
             return

@@ -21,8 +21,8 @@ public struct WalletWithChainIds: Identifiable, Hashable {
     init(from wallet: OFEmbeddedAccount) {
         self.id = wallet.id
         self.address = wallet.address
-        self.accountType = wallet.accountType
-        self.chainType = wallet.chainType
+        self.accountType = wallet.accountType.rawValue
+        self.chainType = wallet.chainType.rawValue
         self.implementationType = wallet.implementationType
         self.chainIds = wallet.chainId.map { [$0] } ?? []
     }
@@ -73,7 +73,7 @@ final class WalletListViewModel: ObservableObject {
                 return
             }
             // Filter only SMART_ACCOUNT like in TS
-            let smartWallets = walletsResponse.filter { $0.accountType.uppercased() == "SMART_ACCOUNT" }
+            let smartWallets = walletsResponse.filter { $0.accountType == .smartAccount }
 
             // Group by address (case-insensitive) and merge chainIds
             var map = [String: WalletWithChainIds]()  // key = lowercased address
